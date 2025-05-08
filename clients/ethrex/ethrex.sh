@@ -8,18 +8,6 @@ export RUST_LOG_STYLE=never
 
 ethrex=./ethrex
 
-# Create the data directory.
-# DATADIR="/ethrex-hive-datadir"
-# mkdir $DATADIR
-# FLAGS="$FLAGS --datadir $DATADIR"
-
-# TODO If a specific network ID is requested, use that
-#if [ "$HIVE_NETWORK_ID" != "" ]; then
-#    FLAGS="$FLAGS --networkid $HIVE_NETWORK_ID"
-#else
-#    FLAGS="$FLAGS --networkid 1337"
-#fi
-
 # Configure the chain.
 mv /genesis.json /genesis-input.json
 jq -f /mapper.jq /genesis-input.json > /genesis.json
